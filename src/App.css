@@ -1,0 +1,284 @@
+/* ───── Layout ───── */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", "Noto Sans JP", system-ui, sans-serif;
+  color: #1a1a2e;
+  background: #f0f4ff;
+}
+
+/* ───── Header ───── */
+.app-header {
+  background: linear-gradient(135deg, #6c63ff 0%, #3ecfcf 100%);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+}
+
+.app-header h1 {
+  margin: 0 0 0.4rem;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* ───── Main ───── */
+.app-main {
+  flex: 1;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ───── Input Section ───── */
+.input-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.input-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #333;
+}
+
+.chord-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #d0d7e8;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+  color: #222;
+  background: #f8faff;
+}
+
+.chord-textarea:focus {
+  outline: none;
+  border-color: #6c63ff;
+  background: #fff;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ───── Buttons ───── */
+.btn {
+  padding: 0.55rem 1.4rem;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary {
+  background: #6c63ff;
+  color: #fff;
+  border-color: #6c63ff;
+}
+.btn-primary:hover {
+  background: #574fd4;
+  box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
+}
+
+.btn-secondary {
+  background: #3ecfcf;
+  color: #fff;
+  border-color: #3ecfcf;
+}
+.btn-secondary:hover {
+  background: #2fb5b5;
+  box-shadow: 0 4px 10px rgba(62, 207, 207, 0.3);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #666;
+  border-color: #ccc;
+}
+.btn-ghost:hover {
+  background: #f0f0f0;
+}
+
+/* ───── Capo Banner ───── */
+.capo-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff8e1;
+  border-left: 4px solid #f5a623;
+  border-radius: 8px;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.95rem;
+}
+
+.capo-icon {
+  font-size: 1.5rem;
+}
+
+.capo-banner strong {
+  display: block;
+  color: #b07c00;
+  margin-bottom: 0.15rem;
+}
+
+.capo-banner em {
+  font-style: normal;
+  font-weight: 700;
+  color: #b07c00;
+}
+
+/* ───── Table ───── */
+.result-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  overflow-x: auto;
+}
+
+.chord-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.chord-table th {
+  background: #6c63ff;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chord-table th:first-child {
+  border-radius: 12px 0 0 0;
+}
+.chord-table th:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.chord-table td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #eef0f8;
+  vertical-align: middle;
+}
+
+.chord-table tr:last-child td {
+  border-bottom: none;
+}
+
+.chord-table tr:nth-child(even) td {
+  background: #f8f9ff;
+}
+
+.simplified-row td {
+  background: #fff9f0 !important;
+}
+
+/* ───── Fingering ───── */
+.fingering {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6c63ff;
+  letter-spacing: 0.15em;
+  background: #f0eeff;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.unknown {
+  color: #aaa;
+}
+
+/* ───── Per-string diagram ───── */
+.fing-diagram {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.fing-string {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 28px;
+  border: 1px solid #d0d7e8;
+  border-radius: 6px;
+  padding: 0.2rem 0.3rem;
+  background: #f8faff;
+}
+
+.fing-name {
+  font-size: 0.6rem;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.fing-fret {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.fing-fret:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+
+/* ───── Badge ───── */
+.badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: #ff9f43;
+  color: #fff;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+/* ───── Note ───── */
+.tuning-note {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0;
+  text-align: right;
+}
+
+/* ───── Footer ───── */
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #888;
+  border-top: 1px solid #e0e4f0;
+}
